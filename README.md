@@ -1,33 +1,110 @@
-# FLAMENGOo0
+<html>
 
-
-
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <style>
-    body {
-text-aling: left;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      aling-items: center;
-      h1 {
-        margin-top: 20px;
-          }
-      p {
-        max-width: 600px
-        margin-botton: 20px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tô indo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            height: 100%;
         }
-  </style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 50px;
+            position: relative;
+        }
+
+        h1 {
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            font-size: 30px;
+        }
+
+        button {
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-weight: 900;
+            font-size: 25px;
+            background-image: linear-gradient(#ffffff, #dcdcdc);
+            color: #2728FF;
+            border: 2px solid #2728FF;
+            cursor: pointer;
+            z-index: 2;
+            transition: 0.1s;
+        }
+
+        button:hover {
+            background-image: linear-gradient(#ffffff, #ffffff);
+        }
+
+        button:active {
+            padding: 12px 28px;
+            background-image: linear-gradient(#dcdcdc, #dcdcdc);
+
+        }
+
+        img {
+            height: 100%;
+            max-width: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+        }
+
+        .hidden {
+            opacity: 0;
+            transition: opacity 2s ease-in;
+        }
+    </style>
 </head>
+
 <body>
 
-  <h1>SEJA BEM VINDO AO SITE DO FLMENGO!</h1>
-  
-<p> Veja as noticias atualizadas do Flamengo
+    <audio id="audio" src="https://www.myinstants.com/media/sounds/we-live-we-love-we-lie.mp3" preload="auto"></audio>
 
-<p> site sem fake news.
+    <h1>Tô indo...</h1>
+
+    <button id="meu-botao">INDO ONDE?</button>
+
+    <div id="imageContainer" class="hidden">
+        <img src="https://progmatico.com.br/media/indo-ali.png" alt="Imagem">
+    </div>
+
 </body>
+<script>
+
+    var button = document.getElementById('meu-botao');
+    var imageContainer = document.getElementById("imageContainer");
+
+
+    button.addEventListener("click", () => {
+        audio.play();
+        button.style.zIndex = 0;
+        setTimeout(() => {
+            imageContainer.style.opacity = 1;
+        }, 100);
+    });
+
+</script>
 </html>
+
+
+
